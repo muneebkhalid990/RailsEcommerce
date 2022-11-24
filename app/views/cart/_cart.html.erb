@@ -1,0 +1,15 @@
+<%= turbo_frame_tag "cart" do%>
+
+  <div class="container-fluid">
+    <% if @cart.orderables.count > 0 %>
+      <h1>Cart</h1>
+      <%= render "cart/orderables" %>
+      <strong>Total Amount: <%= @cart.total %></strong>
+      <%# else %>
+      <!--    <p>Your Cart is empty</p>-->
+    <% end %>
+  </div>
+
+
+
+<% end %>

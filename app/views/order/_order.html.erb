@@ -1,0 +1,26 @@
+
+<div class="d-md-flex flex-md-equal ">
+  <div class="text-bg-dark text-center overflow-hidden">
+    <div class="row my-3 py-3">
+            <% @cart.orderables.each do |orderable| %>
+            <% product = orderable.product %>
+
+
+                <div id="<%= "cart-#{product.id}" %>">
+                    <p>
+                    <%= image_tag(product.image, style: "height: 100px;") %>
+                    </p>
+                    <p>
+                    <strong>Name:</strong>
+                    <%= product.name %>
+                    </p>
+                
+                    <strong>Total:</strong>
+                        <%= orderable.total%>
+
+                </div>
+
+            <% end %>
+        </div>
+    </div>
+</div>

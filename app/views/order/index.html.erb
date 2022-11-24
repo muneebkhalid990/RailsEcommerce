@@ -1,0 +1,13 @@
+
+<%= turbo_frame_tag "Order" do%>
+
+  <div class="container-fluid">
+    <% if @cart.orderables.count > 0 %>
+      <h1>Order</h1>
+      <%= render "order/order" %>
+    <% end %>
+  </div>
+
+
+
+<% end %>
